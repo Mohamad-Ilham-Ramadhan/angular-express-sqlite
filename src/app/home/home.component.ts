@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent {
   constructor(private http: HttpClient) {
-    this.http.get('/hello').subscribe( result => {
+    this.http.get('/api/hello').subscribe( result => {
       console.log('result', result);
     });
   }
