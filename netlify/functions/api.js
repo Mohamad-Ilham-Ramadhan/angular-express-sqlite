@@ -11,7 +11,8 @@ router.get("/hello", (req, res) => {
 });
 
 router.get("/uhuy", (req, res) => { 
-      res.send("Spontan uhuy!")
+      // res.send("Spontan uhuy!")
+      res.json("Spontan uhuy!")
 });
 
 api.use("/api/", router);
