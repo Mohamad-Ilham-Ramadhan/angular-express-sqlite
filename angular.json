@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/with-express-sqlite/browser",
+            "outputPath": "dist/with-express-sqlite",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
