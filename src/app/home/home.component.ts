@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent {
   constructor(private http: HttpClient) {
-    this.http.get('/api/hello').subscribe( result => {
-      console.log('result', result);
+    this.http.get(environment.apiUrl+'/api/hello').subscribe( (result) => {
+      console.log('result', result, typeof result);
+      this.text = result as string;
     });
   }
+  text: string = '';
 }
